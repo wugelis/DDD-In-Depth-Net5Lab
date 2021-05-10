@@ -31,5 +31,17 @@ namespace Domain.Customer
         {
             chtName = value;
         }
+
+        private DetailData location;
+
+        public DetailData GetLocation()
+        {
+            return location;
+        }
+
+        public void SetLocation(DetailData value)
+        {
+            location = value;
+        }
     }
 }

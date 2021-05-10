@@ -1,6 +1,7 @@
+using Application.Configuration.Repositories;
 using Application.Customer.GetCustomerDetailQuery;
 using Application.Customer.RegisterCustomer;
-using Domain.Customer.Details;
+//using Domain.Customer.Details;
 using Infrastructure.Domain.Customer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

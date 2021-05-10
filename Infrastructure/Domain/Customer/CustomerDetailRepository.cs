@@ -1,4 +1,5 @@
-﻿using Domain.Customer.Details;
+﻿using Application.Configuration.Repositories;
+//using Domain.Customer.Details;
 using System;
 using System.Collections.Generic;
 using System.Linq;

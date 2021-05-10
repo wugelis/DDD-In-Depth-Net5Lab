@@ -1,4 +1,6 @@
-﻿using Domain.Customer.Details;
+﻿using Application.Configuration.Repositories;
+using Domain.Customer;
+//using Domain.Customer.Details;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +24,7 @@ namespace Application.Customer.GetCustomerDetailQuery
                    {
                        UserId = c.GetAccountId(),
                        ChtName = c.GetChtName(),
-                       Location = new DetailData("台灣").Location
+                       Location = c.GetLocation().Location
                    };
         }
     }
