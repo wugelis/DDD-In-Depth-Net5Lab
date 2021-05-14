@@ -10,6 +10,11 @@ namespace Application.Configuration.Repositories
     public interface ICustomerDetailRepository
     {
         IEnumerable<CustomerDomain.Customer> GetCustomers();
-        int AddBasicCustomerDetailData(CustomerDomain.Customer customer);
+        int Save(CustomerDomain.Customer customer);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        CustomerDomain.Customer Get();
     }
 }

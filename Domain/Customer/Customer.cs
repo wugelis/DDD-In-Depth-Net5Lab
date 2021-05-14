@@ -43,5 +43,19 @@ namespace Domain.Customer
         {
             location = value;
         }
+        /// <summary>
+        /// 檢查（帳號／身分證號）是否為特殊身分
+        /// </summary>
+        /// <param name="accountId"></param>
+        /// <returns></returns>
+        public bool CheckSpecialUser(string accountId)
+        {
+            return false;
+        }
+
+        public void ShowSpecialFlag()
+        {
+            
+        }
     }
 }

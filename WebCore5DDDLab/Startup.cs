@@ -1,6 +1,7 @@
 using Application.Configuration.Repositories;
 using Application.Customer.GetCustomerDetailQuery;
 using Application.Customer.RegisterCustomer;
+using Domain.Customer;
 //using Domain.Customer.Details;
 using Infrastructure.Domain.Customer;
 using Microsoft.AspNetCore.Builder;
@@ -42,6 +43,7 @@ namespace WebCore5DDDLab
             services.AddScoped<ICustomerDetailRepository, CustomerDetailRepository>();
             services.AddScoped<GetCustomerDetailQuery>();
             services.AddScoped<CustomerBasicDetailRegisterHandler>();
+            services.AddScoped<CustomerService>();
 
         }
 
