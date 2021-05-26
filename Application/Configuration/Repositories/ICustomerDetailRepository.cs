@@ -15,6 +15,6 @@ namespace Application.Configuration.Repositories
         /// 
         /// </summary>
         /// <returns></returns>
-        CustomerDomain.Customer Get();
+        CustomerDomain.Customer Get(string guid);
     }
 }

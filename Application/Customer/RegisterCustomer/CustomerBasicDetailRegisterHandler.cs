@@ -25,10 +25,8 @@ namespace Application.Customer.RegisterCustomer
 
         public int AddCustomerDetailData(CustomerDetailDTO customerDeatil)
         {
-            CustomerDetail.Customer customer = _customerDetailRepository.Get();
-            customer.SetAccountId(customerDeatil.UserId);
-            customer.SetChtName(customerDeatil.ChtName);
-            customer.SetLocation(new DetailData(customerDeatil.Location));
+            CustomerDetail.Customer customer 
+                = new CustomerDetail.Customer(customerDeatil.UserId, customerDeatil.ChtName, customerDeatil.Location);
 
             // 檢查（帳號／身分證號）是否為特殊身分
             _customerService.CheckIsSpecialAccount(customer, customerDeatil.UserId);

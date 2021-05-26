@@ -17,9 +17,10 @@ namespace Infrastructure.Domain.Customer
             return 1;
         }
 
-        public global::Domain.Customer.Customer Get()
+        public global::Domain.Customer.Customer Get(string guid)
         {
-            return new global::Domain.Customer.Customer();
+            return _customers.Where(c => c.GetCustomerId().Value.ToString() == guid)
+                .FirstOrDefault();
         }
 
         public IEnumerable<global::Domain.Customer.Customer> GetCustomers()

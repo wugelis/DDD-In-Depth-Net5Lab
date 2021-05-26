@@ -8,41 +8,42 @@ namespace Domain.Customer
 {
     public class Customer: Entity, IAggegateRoot
     {
-        private string accountId;
+        private CustomerId _customerid;
+
+        public CustomerId GetCustomerId()
+        {
+            return _customerid;
+        }
+
+        private string _accountId;
+
+        public Customer(string accountId, string chtName, string location)
+        {
+            _accountId = accountId;
+            _chtName = chtName;
+            _location = new DetailData(location);
+            _customerid = new CustomerId(Guid.NewGuid());
+        }
 
         public string GetAccountId()
         {
-            return accountId;
+            return _accountId;
         }
 
-        public void SetAccountId(string value)
-        {
-            accountId = value;
-        }
-
-        private string chtName;
+        private string _chtName;
 
         public string GetChtName()
         {
-            return chtName;
+            return _chtName;
         }
-
-        public void SetChtName(string value)
-        {
-            chtName = value;
-        }
-
-        private DetailData location;
+        
+        private DetailData _location;
 
         public DetailData GetLocation()
         {
-            return location;
+            return _location;
         }
-
-        public void SetLocation(DetailData value)
-        {
-            location = value;
-        }
+        
         /// <summary>
         /// 檢查（帳號／身分證號）是否為特殊身分
         /// </summary>
