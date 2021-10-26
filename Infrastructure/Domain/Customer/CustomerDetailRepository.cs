@@ -19,7 +19,8 @@ namespace Infrastructure.Domain.Customer
 
         public global::Domain.Customer.Customer Get(string guid)
         {
-            return _customers.Where(c => c.GetCustomerId().Value.ToString() == guid)
+            return _customers
+                .Where(c => c.GetCustomerId().Value.ToString() == guid)
                 .FirstOrDefault();
         }
 
